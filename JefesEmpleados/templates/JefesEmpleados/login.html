@@ -1,0 +1,12 @@
+<!-- miapp/templates/miapp/login.html -->
+{% extends "base.html" %}  <!-- Extiende de tu base.html si tienes uno -->
+
+{% block content %}
+<div class="login-form">
+    <form method="post" action="{% url 'login' %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Login</button>
+    </form>
+</div>
+{% endblock %}
